@@ -1,4 +1,4 @@
-$white: #ffffff;
+$white: #080808;
 $black: #000000;
 $primary1: #ffbe33;
 $primary2: #222831;
@@ -6,14 +6,14 @@ $textCol: #1f1f1f;
 
 // import fonts -  font-family: 'Open Sans', sans-serif and  font-family: 'Dancing Script', cursive;
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Open+Sans:wght@400;600;700&display=swap');
 
 @mixin main-font {
   font-family: "Open Sans", sans-serif;
 }
 
 @mixin second-font {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
@@ -159,6 +159,7 @@ a:focus {
 
 }
 
+flex: 1
 .header_section {
   padding: 15px 0;
 
@@ -171,15 +172,20 @@ a:focus {
 .navbar-brand {
   @include second-font();
 
-  span {
-    font-weight: bold;
-    font-size: 32px;
-    color: $white;
-  }
+span {
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(0, 0, 0); /* or use a variable if using SCSS: $white */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 }
 
 .custom_nav-container {
   padding: 0;
+  text-align: center;
 
   .navbar-nav {
     padding-left: 18%;
@@ -187,6 +193,7 @@ a:focus {
     .nav-item {
       .nav-link {
         padding: 5px 20px;
+        flex: 1;
         color: $white;
         text-align: center;
         text-transform: uppercase;
@@ -345,7 +352,12 @@ a:focus {
     }
 
     p {
-      font-size: 14px;
+      font-size: 20px;
+      background-color: rgba(4, 2, 156, 0.685); /* semi-transparent gray */
+      color: #fffbfb; /* white text for contrast */
+      padding: 15px 20px; /* adds breathing space */
+      border-radius: 8px; /* smooth corners */
+      display: inline-block;
     }
 
     a {
